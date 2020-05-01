@@ -1,5 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
+const axios = require("axios");
 const markdown = require("./utils/generateMarkdown");
 
   inquirer.prompt([
@@ -29,6 +30,11 @@ const markdown = require("./utils/generateMarkdown");
     message: "How is this program used?"
   },
   {
+    type: "input",
+    name: "version",
+    message: "What version of the project is this?"
+  },
+  {
     type: "list",
     name: "license",
     message: "What license are you using?",
@@ -36,7 +42,8 @@ const markdown = require("./utils/generateMarkdown");
       "MIT",
       "Apache",
       "BSD",
-      "No license"
+      "ISC",
+      "No_License"
     ]
   },
   {
@@ -48,24 +55,29 @@ const markdown = require("./utils/generateMarkdown");
     type: "input",
     name: "tests",
     message: "Write about your tests here: "
-  },
-  {
-    type: "input",
-    name: "email",
-    message: "What is your email address?"
   }
+  
 ]).then(function(data) {
   console.log(data);
 
-  fs.writeFile("README.md", markdown(data), function(err, data) {
+  // const queryUrl = `https://api.github.com/users/${data.name}`;
 
-  }
-  )
+  // axios.get(queryUrl).then(function(res) {
+  //   const myObject = {"email": res.email, "image": res.avatar_url}; 
+  //   });
+
+
+
+  fs.writeFile("README.md", markdown(data), function(err, data) {
+    if (err) {
+      throw err;
+    } else
+    console.log("Success!");
+  })
 });
 
 
-function writeToFile(fileName, data) {
-}
+
 
 function init() {
 

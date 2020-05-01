@@ -2,7 +2,11 @@ function generateMarkdown(data) {
   
   return `
 # ${data.title}
-[![GitHub license](https://img.shields.io/badge/license-${data.license}-blue.svg)](https://github.com/${data.name})
+[![GitHub license](https://img.shields.io/badge/license-${data.license}-blue.svg)]  
+[![GitHub version](https://img.shields.io/badge/version-${data.version}-orange.svg]  
+
+## GitHub: (https://github.com/${data.name})
+
 
 ## Description
 ${data.description}
@@ -14,6 +18,8 @@ ${data.description}
 * [Usage](#usage)
 
 * [License](#license)
+
+* [Version](#version)
 
 * [Contributing](#contributing)
 
@@ -30,6 +36,10 @@ ${data.installation}
 ## Usage
 
 ${data.usage}
+
+## Version
+
+This is Version #${data.version}.
 
 ## License
 
