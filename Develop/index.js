@@ -3,6 +3,8 @@ const fs = require("fs");
 const axios = require("axios");
 const markdown = require("./utils/generateMarkdown");
 
+
+function init() {
   inquirer.prompt([
   {
     type: "input",
@@ -43,7 +45,7 @@ const markdown = require("./utils/generateMarkdown");
       "Apache",
       "BSD",
       "ISC",
-      "No_License"
+      "None"
     ]
   },
   {
@@ -57,30 +59,28 @@ const markdown = require("./utils/generateMarkdown");
     message: "Write about your tests here: "
   }
   
-]).then(function(data) {
+  ]).then(function(data) {
   console.log(data);
+  
+  const queryUrl = `https://api.github.com/users/${data.name}`;
+  axios.get(queryUrl)
 
-  // const queryUrl = `https://api.github.com/users/${data.name}`;
+ .then(function(res) {
+   console.log(res.data);
+   data.gitEmail = res.data.email;
+   data.gitImage = `${res.data.avatar_url}&s=100`; 
 
-  // axios.get(queryUrl).then(function(res) {
-  //   const myObject = {"email": res.email, "image": res.avatar_url}; 
-  //   });
-
-
-
-  fs.writeFile("README.md", markdown(data), function(err, data) {
+   fs.writeFile("README.md", markdown(data), function(err, data) {
     if (err) {
       throw err;
     } else
-    console.log("Success!");
+    console.log("Success! You have a newly generated READme.md file!");
+    });
+    })
   })
+.catch(function (err) {
+  if (err) throw err
 });
-
-
-
-
-function init() {
-
 }
-
 init();
+

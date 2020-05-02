@@ -1,13 +1,12 @@
 
-# weatherDashboard
-[![GitHub license](https://img.shields.io/badge/license-No license-blue.svg)]  
-[![GitHub license](https://img.shields.io/badge/version-1.0-orange.svg]  
+# Weather Dashboard
+![GitHub license](https://img.shields.io/badge/license-ISC-blue.svg) ![GitHub version](https://img.shields.io/badge/version-1.0-orange.svg)  
 
 ## GitHub: (https://github.com/alyssahellrung)
 
 
 ## Description
-A browser app that allows users to search for current weather conditions and five-day forecast for the cities of their choice.
+Weather Dashboard is a simple web application that allows users to search for weather conditions for the cities of their choice.
 
 ## Table of Contents
 
@@ -29,11 +28,11 @@ A browser app that allows users to search for current weather conditions and fiv
 
 To install necessary dependencies, run the following command:
 
-None
+npm install inquirer
 
 ## Usage
 
-Enter a city name in the input box and press the search button. The current weather conditions will appear as well as a five-day forecast. The searched city will be saved as a button, so feel free to search for as many cities as you would like and revisit any of your previously searched cities just by pressing the button. 
+Users can enter a city name into the search field and click the search button, at which point the current weather conditions and five-day forecast for that city will appear on the page. Searched cities are saved as buttons for easy future reference. 
 
 ## Version
 
@@ -41,11 +40,11 @@ This is Version #1.0.
 
 ## License
 
-This project has a No license license.
+This project has a(n) ISC license.
   
 ## Contributing
 
-Looking for ways to improve this app. Please contact me.
+Contact me
 
 ## Tests
 
@@ -53,5 +52,5 @@ No tests
 
 ## Questions
 
-If you have any questions about the repo, open an issue or contact [alyssahellrung](undefined) directly at undefined.
+If you have any questions about the repo, contact alyssahellrung directly: no public email. ![profile image](https://avatars0.githubusercontent.com/u/57811605?v=4&s=100)
 

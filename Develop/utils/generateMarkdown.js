@@ -2,8 +2,7 @@ function generateMarkdown(data) {
   
   return `
 # ${data.title}
-[![GitHub license](https://img.shields.io/badge/license-${data.license}-blue.svg)]  
-[![GitHub version](https://img.shields.io/badge/version-${data.version}-orange.svg]  
+![GitHub license](https://img.shields.io/badge/license-${data.license}-blue.svg) ![GitHub version](https://img.shields.io/badge/version-${data.version}-orange.svg)  
 
 ## GitHub: (https://github.com/${data.name})
 
@@ -43,7 +42,7 @@ This is Version #${data.version}.
 
 ## License
 
-This project has a ${data.license} license.
+This project has a(n) ${data.license} license.
   
 ## Contributing
 
@@ -55,7 +54,7 @@ ${data.tests || "No tests"}
 
 ## Questions
 
-If you have any questions about the repo, open an issue or contact [${data.name}](undefined) directly at ${data.email}.
+If you have any questions about the repo, contact ${data.name} directly: ${data.gitEmail || "no public email"}. ![profile image](${data.gitImage})
 
 `;
 }
