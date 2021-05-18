@@ -1,12 +1,12 @@
 
-# NewProject
-![GitHub license](https://img.shields.io/badge/license-None-blue.svg) ![GitHub version](https://img.shields.io/badge/version-1-orange.svg)  
+# testproject2
+![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg) ![GitHub version](https://img.shields.io/badge/version-1.1-orange.svg)  
 
 ## GitHub: (https://github.com/alyssahellrung)
 
 
 ## Description
-It's a new project
+This is to see if I totally messed everything up.
 
 ## Table of Contents
 
@@ -28,23 +28,23 @@ It's a new project
 
 To install necessary dependencies, run the following command:
 
-None
+node index.js
 
 ## Usage
 
-To test an earlier project
+To test if I messed it all up
 
 ## Version
 
-This is Version #1.
+This is Version #1.1.
 
 ## License
 
-This project has a(n) None license.
+This project has a(n) MIT license.
   
 ## Contributing
 
-email me
+email m
 
 ## Tests
 
